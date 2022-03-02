@@ -8,7 +8,7 @@ import { BarrasComponent } from './pages/barras/barras.component';
 import { BarrasDobleComponent } from './pages/barras-doble/barras-doble.component';
 import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';
-import { DonaComponent } from './components/dona/dona.component';
+import { DonaComponent } from './pages/dona/dona.component';
 
 
 
@@ -16,9 +16,9 @@ import { DonaComponent } from './components/dona/dona.component';
   declarations: [
     BarrasComponent,
     BarrasDobleComponent,
+    DonaComponent,
     DonaHttpComponent,
-    GraficaBarraComponent,
-    DonaComponent
+    GraficaBarraComponent
   ],
   imports: [
     CommonModule,
