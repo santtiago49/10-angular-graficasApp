@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { map } from "rxjs/operators";
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,5 +15,16 @@ export class GraficasService {
     return this.http.get('http://localhost:3000/grafica')
   }
 
+  getUsuariosRedesSocialesDonaData(){
+    return this.getUsuariosRedesSociales()
+        .pipe(
+          map(data => {
+            const labels = Object.keys(data)
+            const datasets = [{data: Object.values(data)}]
+
+            return { labels, datasets }
+          })
+        )
+  }
 
 }
